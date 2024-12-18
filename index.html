@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <!-- Updated Content-Security-Policy to allow CDN scripts -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;">
+    
+    <title>AI Trading Platform</title>
+
+    <!-- Include Web3.js and Ethers.js directly from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script type="module">
+        import { ethers } from 'https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.esm.js';
+      </script>
+      
+    <!-- <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.esm.js"></script> -->
+    <script type="module" src="main.js"></script>
+</head>
+<body>
+    <h1>AI Trading Platform</h1>
+
+    <!-- //Connect Wallet Button -->
+    <button id="connectWalletBtn">Connect Wallet</button>
+    <br><br>
+
+    <!-- Deposit Section -->
+    <input type="number" id="depositAmount" placeholder="Enter deposit amount in BNB">
+    <button id="depositBtn" >Deposit</button>
+    <br><br>
+
+    <!-- Withdraw Section -->
+    <input type="number" id="withdrawAmount" placeholder="Enter withdrawal amount in BNB">
+    <button id="withdrawBtn">Withdraw</button>
+    <br><br>
+
+    <!-- View Profit Button -->
+    <button id="checkProfitBtn">View Profit</button>
+    <div id="profitResult"></div>
+    <br><br>
+
+    <!-- Claim Profit Button -->
+    <button id="claimProfitBtn" >Claim Profit</button>
+
+    <!-- AppKit Connect/Network Modal Buttons -->
+    <button id="open-connect-modal">Open Connect Modal</button>
+    <button id="open-network-modal">Open Network Modal</button>
+
+    <!-- AppKit Button -->
+    <appkit-button></appkit-button>
+    <appkit-network-button></appkit-network-button>
+</body>
+</html>
